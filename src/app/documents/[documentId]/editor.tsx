@@ -10,6 +10,7 @@ import Table from "@tiptap/extension-table";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
 import StarterKit from "@tiptap/starter-kit";
+import Underline from "@tiptap/extension-underline";
 
 import { useEditorStore } from "@/store/use-editor-store";
 
@@ -18,6 +19,27 @@ export const Editor = () => {
 
   const editor = useEditor({
     onCreate: ({ editor }) => {
+      setEditor(editor);
+    },
+    onUpdate: ({ editor }) => {
+      setEditor(editor);
+    },
+    onDestroy: () => {
+      setEditor(null);
+    },
+    onSelectionUpdate: ({ editor }) => {
+      setEditor(editor);
+    },
+    onTransaction: ({ editor }) => {
+      setEditor(editor);
+    },
+    onFocus: ({ editor }) => {
+      setEditor(editor);
+    },
+    onBlur: ({ editor }) => {
+      setEditor(editor);
+    },
+    onContentError: ({ editor }) => {
       setEditor(editor);
     },
     editorProps: {
@@ -37,6 +59,7 @@ export const Editor = () => {
       Table,
       Image,
       ImageResize,
+      Underline,
     ],
     content: "<p>Hello World!</p>",
   });
