@@ -88,6 +88,15 @@ body {
 }
 
 .tiptap {
+  a {
+    @apply text-blue-500;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   /* List styles */
   ul,
   ol {

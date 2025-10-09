@@ -19,6 +19,13 @@ import { useEditorStore } from "@/store/use-editor-store";
 import { Separator } from "@/components/ui/separator";
 import { FontFamilyButton } from "@/components/FontFamilyButton";
 import { HeadingLevelButton } from "@/components/HeadingLevelButton";
+import { TextColorButton } from "@/components/TextColorButton";
+import { TextHighlightColorButton } from "@/components/TextHighlightColorButton";
+import { LinkButton } from "@/components/LinkButton";
+import { ImageButton } from "@/components/ImageButton";
+import { AlignButton } from "@/components/AlignButton";
+import { ListButton } from "@/components/ListButton";
+import { FontSizeButton } from "@/components/FontSizeButton";
 
 interface ToolbarButtonProps {
   onClick?: () => void;
@@ -145,10 +152,17 @@ const Toolbar: React.FC = () => {
       {sections[1].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
+      <AlignButton />
+      <FontSizeButton />
+      <TextColorButton />
+      <TextHighlightColorButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {sections[2].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
+      <LinkButton />
+      <ImageButton />
+      <ListButton />
     </div>
   );
 };
