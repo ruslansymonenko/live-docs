@@ -26,6 +26,7 @@ import { ImageButton } from "@/components/ImageButton";
 import { AlignButton } from "@/components/AlignButton";
 import { ListButton } from "@/components/ListButton";
 import { FontSizeButton } from "@/components/FontSizeButton";
+import { LineHeightButton } from "@/components/LineHeightButton";
 
 interface ToolbarButtonProps {
   onClick?: () => void;
@@ -154,6 +155,7 @@ const Toolbar: React.FC = () => {
       ))}
       <AlignButton />
       <FontSizeButton />
+      <LineHeightButton />
       <TextColorButton />
       <TextHighlightColorButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
