@@ -1,5 +1,4 @@
 import RulerMarker from "@/components/RulerMarker";
-import { se } from "date-fns/locale";
 import { useState, useRef } from "react";
 
 const markers = Array.from({ length: 83 }, (_, i) => i);
@@ -69,12 +68,9 @@ export const Ruler: React.FC = () => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="h-6 border-b border-gray-300 flex items-end relative select-none print:hidden"
+      className="h-6 w-[816px] mx-auto border-b border-gray-300 flex items-end relative select-none print:hidden"
     >
-      <div
-        id="ruler-container"
-        className="max-w-[816px] mx-auto h-full w-full relative"
-      >
+      <div id="ruler-container" className="h-full w-full relative">
         <RulerMarker
           position={leftMargin}
           isLeft={true}

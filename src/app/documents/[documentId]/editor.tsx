@@ -86,7 +86,7 @@ export const Editor = () => {
       ImageResize,
       Underline,
     ],
-    content: "<p>Hello World!</p>",
+    content: "",
   });
 
   return (
